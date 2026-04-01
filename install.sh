@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 [[ -d "${PREFIX}/tmp/chprompt" ]] && {
-    command rm -rfv "${PREFIX}/tmp/chprompt"
+    command rm -rf "${PREFIX}/tmp/chprompt"
 }
 
 command git clone --depth 1 \
@@ -9,7 +9,7 @@ command git clone --depth 1 \
     "${PREFIX}/tmp/chprompt"
 
 cd "${PREFIX}/tmp/chprompt" || exit 1
-command chmod +x -Rv "install.sh"
+command chmod +x -R "install.sh"
 command bash "install.sh"
 cd
 
