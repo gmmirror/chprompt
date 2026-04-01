@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 [[ -d "${PREFIX}/tmp/chprompt" ]] && {
-    command rm -rfv "${PREFIX}/tmp/chprompt"
+    command rm -rf "${PREFIX}/tmp/chprompt"
 }
-
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Chprompt' \
     "${PREFIX}/tmp/chprompt"
