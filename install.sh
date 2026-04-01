@@ -7,6 +7,10 @@
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Chprompt' \
     "${PREFIX}/tmp/chprompt"
-command chmod +x -R "${PREFIX}/tmp/chprompt"
-command bash "${PREFIX}/tmp/chprompt/install.sh"
+
+cd "${PREFIX}/tmp/chprompt" || exit 1
+command chmod +x -R "install.sh"
+command bash "install.sh"
+cd
+
 exit 0
