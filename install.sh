@@ -8,6 +8,10 @@ if [[ -d "${PREFIX}/tmp/chprompt" ]]; then
     command rm -rf "${PREFIX}/tmp/chprompt"
 fi
 
+if [[ -d "${PREFIX}/opt/chprompt" ]]; then
+    command rm -rf "${PREFIX}/opt/chprompt"
+fi
+
 command git clone --depth 1 \
     'https://github.com/Zeronetsec/Chprompt' \
     "${PREFIX}/tmp/chprompt"
